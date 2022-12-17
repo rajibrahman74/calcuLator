@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcuLator</title>
+
+    <!-- 
+        input.css file linkup to html
+     -->
+    
+
+    <!-- 
+        Google fonts
+      -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/index-c9fc7eb9.css">
+</head>
+
+<body class="font-sans m-0 box-border bg-black">
+    <div
+        id="container" class="container w-[1050px] h-[600px] my-5 mx-auto bg-[url('/assets/bgimage3.jpg')]  bg-center bg-no-repeat bg-cover rounded-lg">
+        <div id="calculator" class="calculator w-[330px] h-[530px] bg-[#eaedef] mx-auto top-7 relative rounded-lg shadow-2xl">
+            <div id="result" class="result h-[120px]">
+                <div id="history" class="history text-right h-5 mx-5 pt-5 text-[15px] text-[#919191]">
+                    <p id="history-value" class="history-value"></p>
+                </div>
+                <div id="output" class="output text-right h-[60px] my-[10px] mx-5 text-3xl">
+                    <p id="output-value" class="output-value"></p>
+                </div>
+            </div>
+            <div id="keywords" class="h-[400px]">
+                <button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="clear">C</button>
+					<button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="backspace">CE</button>
+					<button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="%">%</button>
+					<button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[20px] bg-[#20b2aa;]" id="/">&#247;</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="7">7</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="8">8</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="9">9</button>
+					<button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[20px] bg-[#ffa500]" id="*">&times;</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="4">4</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="5">5</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="6">6</button>
+					<button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[20px] bg-[#f08080]" id="-">-</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="1">1</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="2">2</button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="3">3</button>
+					<button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[20px] bg-[#7d93e0]" id="+">+</button>
+					<button class="empty focus:outline-0 bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="empty focus:outline-0 bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]"></button>
+					<button class="number focus:outline-0 active:text-[13px] cursor-pointer bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="0">0</button>
+					<button class="empty focus:outline-0 bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]" id="empty focus:outline-0 bg-[#eaedef] h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[15px]"></button>
+					<button class="operator focus:outline-0 active:text-[13px] cursor-pointer h-[50px] w-[50px] m-[15px] float-left rounded-full border-0 font-bold text-[20px] bg-[#9477af]" id="=">=</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 
+        javascript file connect to the html here
+     -->
+    <script src="script.js"></script>
+</body>
+
+</html>
